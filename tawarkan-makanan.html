@@ -3,55 +3,104 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta
         name="description"
         content="Formulir prototipe untuk mencatat makanan berlebih yang akan ditawarkan melalui SisaBaik."
     >
+
     <title>Tawarkan Makanan | SisaBaik</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <a href="#konten-utama">Lewati ke konten utama</a>
 
-    <header>
-        <p><strong>SisaBaik</strong></p>
+    <a class="skip-link" href="#konten-utama">
+        Lewati ke konten utama
+    </a>
 
-        <nav aria-label="Navigasi utama">
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="daftar-penyedia.html">Daftar sebagai penyedia</a></li>
-                <li>
-                    <a href="tawarkan-makanan.html" aria-current="page">
-                        Tawarkan makanan
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-layout">
+
+            <p class="brand">SisaBaik</p>
+
+            <nav aria-label="Navigasi utama">
+                <ul class="nav-list">
+
+                    <li>
+                        <a href="index.html">
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="daftar-penyedia.html">
+                            Daftar sebagai penyedia
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="tawarkan-makanan.html"
+                            aria-current="page"
+                        >
+                            Tawarkan makanan
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
-    <main id="konten-utama" tabindex="-1">
-        <h1>Catat penawaran makanan berlebih</h1>
 
-        <p>
-            Gunakan data fiktif selama praktikum. Jangan menawarkan makanan yang
-            rusak, kedaluwarsa, tercemar, atau tidak aman dikonsumsi.
-        </p>
+    <main
+        class="container"
+        id="konten-utama"
+        tabindex="-1"
+    >
 
-        <p id="petunjuk-wajib">
-            Kolom bertanda <strong>*</strong> wajib diisi.
-        </p>
+        <div class="page-heading">
+
+            <h1>
+                Catat penawaran makanan berlebih
+            </h1>
+
+            <p class="lead">
+                Gunakan data fiktif selama praktikum.
+                Jangan menawarkan makanan yang rusak, kedaluwarsa,
+                tercemar, atau tidak aman dikonsumsi.
+            </p>
+
+            <p
+                class="required-note"
+                id="petunjuk-wajib"
+            >
+                Kolom bertanda <strong>*</strong> wajib diisi.
+            </p>
+
+        </div>
+
 
         <form
+            class="form-card"
             action="tawarkan-makanan.html"
             method="get"
             aria-describedby="petunjuk-wajib"
         >
 
-            <fieldset>
-                <legend>Identitas makanan</legend>
+            <fieldset class="form-section">
+                <legend>
+                    Identitas makanan
+                </legend>
 
                 <p>
-                    <label for="nama-makanan">Nama makanan *</label><br>
+                    <label for="nama-makanan">
+                        Nama makanan *
+                    </label>
+                    <br>
+
                     <input
                         type="text"
                         id="nama-makanan"
@@ -62,21 +111,55 @@
                     >
                 </p>
 
+
                 <p>
-                    <label for="kategori">Kategori *</label><br>
-                    <select id="kategori" name="kategori" required>
-                        <option value="">Pilih kategori</option>
-                        <option value="makanan-siap-saji">Makanan siap saji</option>
-                        <option value="roti-kue">Roti atau kue</option>
-                        <option value="buah-sayur">Buah atau sayur</option>
-                        <option value="minuman">Minuman</option>
-                        <option value="bahan-pangan">Bahan pangan</option>
-                        <option value="lainnya">Lainnya</option>
+                    <label for="kategori">
+                        Kategori *
+                    </label>
+                    <br>
+
+                    <select
+                        id="kategori"
+                        name="kategori"
+                        required
+                    >
+                        <option value="">
+                            Pilih kategori
+                        </option>
+
+                        <option value="makanan-siap-saji">
+                            Makanan siap saji
+                        </option>
+
+                        <option value="roti-kue">
+                            Roti atau kue
+                        </option>
+
+                        <option value="buah-sayur">
+                            Buah atau sayur
+                        </option>
+
+                        <option value="minuman">
+                            Minuman
+                        </option>
+
+                        <option value="bahan-pangan">
+                            Bahan pangan
+                        </option>
+
+                        <option value="lainnya">
+                            Lainnya
+                        </option>
                     </select>
                 </p>
 
+
                 <p>
-                    <label for="deskripsi-makanan">Deskripsi kondisi makanan *</label><br>
+                    <label for="deskripsi-makanan">
+                        Deskripsi kondisi makanan *
+                    </label>
+                    <br>
+
                     <textarea
                         id="deskripsi-makanan"
                         name="deskripsi_makanan"
@@ -85,19 +168,29 @@
                         maxlength="600"
                         aria-describedby="bantuan-deskripsi-makanan"
                         required
-                    ></textarea><br>
+                    ></textarea>
+                    <br>
 
                     <small id="bantuan-deskripsi-makanan">
-                        Jelaskan isi, kondisi, waktu produksi, dan alasan menjadi stok berlebih.
+                        Jelaskan isi, kondisi, waktu produksi,
+                        dan alasan menjadi stok berlebih.
                     </small>
                 </p>
+
             </fieldset>
 
-            <fieldset>
-                <legend>Jumlah dan skema pemulihan nilai</legend>
+
+            <fieldset class="form-section">
+                <legend>
+                    Jumlah dan skema pemulihan nilai
+                </legend>
 
                 <p>
-                    <label for="jumlah">Jumlah tersedia *</label><br>
+                    <label for="jumlah">
+                        Jumlah tersedia *
+                    </label>
+                    <br>
+
                     <input
                         type="number"
                         id="jumlah"
@@ -109,22 +202,50 @@
                     >
                 </p>
 
+
                 <p>
-                    <label for="satuan">Satuan *</label><br>
-                    <select id="satuan" name="satuan" required>
-                        <option value="">Pilih satuan</option>
-                        <option value="porsi">Porsi</option>
-                        <option value="paket">Paket</option>
-                        <option value="buah">Buah</option>
-                        <option value="kilogram">Kilogram</option>
-                        <option value="liter">Liter</option>
+                    <label for="satuan">
+                        Satuan *
+                    </label>
+                    <br>
+
+                    <select
+                        id="satuan"
+                        name="satuan"
+                        required
+                    >
+                        <option value="">
+                            Pilih satuan
+                        </option>
+
+                        <option value="porsi">
+                            Porsi
+                        </option>
+
+                        <option value="paket">
+                            Paket
+                        </option>
+
+                        <option value="buah">
+                            Buah
+                        </option>
+
+                        <option value="kilogram">
+                            Kilogram
+                        </option>
+
+                        <option value="liter">
+                            Liter
+                        </option>
                     </select>
                 </p>
+
 
                 <p>
                     <label for="harga-normal">
                         Harga normal per satuan (rupiah) *
-                    </label><br>
+                    </label>
+                    <br>
 
                     <input
                         type="number"
@@ -137,8 +258,11 @@
                     >
                 </p>
 
-                <fieldset>
-                    <legend>Jenis penawaran *</legend>
+
+                <fieldset class="form-section">
+                    <legend>
+                        Jenis penawaran *
+                    </legend>
 
                     <p>
                         <input
@@ -148,10 +272,12 @@
                             value="diskon"
                             required
                         >
+
                         <label for="jenis-diskon">
                             Dijual dengan harga diskon
                         </label>
                     </p>
+
 
                     <p>
                         <input
@@ -160,16 +286,20 @@
                             name="jenis_penawaran"
                             value="donasi"
                         >
+
                         <label for="jenis-donasi">
                             Disalurkan tanpa biaya
                         </label>
                     </p>
+
                 </fieldset>
+
 
                 <p>
                     <label for="harga-pemulihan">
                         Harga penawaran per satuan (rupiah) *
-                    </label><br>
+                    </label>
+                    <br>
 
                     <input
                         type="number"
@@ -180,22 +310,29 @@
                         step="500"
                         aria-describedby="bantuan-harga"
                         required
-                    ><br>
+                    >
+                    <br>
 
                     <small id="bantuan-harga">
-                        Isi 0 jika makanan disalurkan tanpa biaya. Perbandingan dengan
-                        harga normal akan divalidasi menggunakan JavaScript pada chapter berikutnya.
+                        Isi 0 jika makanan disalurkan tanpa biaya.
+                        Perbandingan dengan harga normal akan divalidasi
+                        menggunakan JavaScript pada chapter berikutnya.
                     </small>
                 </p>
+
             </fieldset>
 
-            <fieldset>
-                <legend>Keamanan dan pengambilan</legend>
+
+            <fieldset class="form-section">
+                <legend>
+                    Keamanan dan pengambilan
+                </legend>
 
                 <p>
                     <label for="batas-pengambilan">
                         Batas waktu pengambilan *
-                    </label><br>
+                    </label>
+                    <br>
 
                     <input
                         type="datetime-local"
@@ -205,10 +342,12 @@
                     >
                 </p>
 
+
                 <p>
                     <label for="petunjuk-penyimpanan">
                         Petunjuk penyimpanan *
-                    </label><br>
+                    </label>
+                    <br>
 
                     <textarea
                         id="petunjuk-penyimpanan"
@@ -220,8 +359,11 @@
                     ></textarea>
                 </p>
 
-                <fieldset>
-                    <legend>Informasi alergen yang diketahui</legend>
+
+                <fieldset class="form-section">
+                    <legend>
+                        Informasi alergen yang diketahui
+                    </legend>
 
                     <p>
                         <input
@@ -230,8 +372,12 @@
                             name="alergen"
                             value="gluten"
                         >
-                        <label for="alergen-gluten">Gluten</label>
+
+                        <label for="alergen-gluten">
+                            Gluten
+                        </label>
                     </p>
+
 
                     <p>
                         <input
@@ -240,8 +386,12 @@
                             name="alergen"
                             value="susu"
                         >
-                        <label for="alergen-susu">Susu</label>
+
+                        <label for="alergen-susu">
+                            Susu
+                        </label>
                     </p>
+
 
                     <p>
                         <input
@@ -250,8 +400,12 @@
                             name="alergen"
                             value="telur"
                         >
-                        <label for="alergen-telur">Telur</label>
+
+                        <label for="alergen-telur">
+                            Telur
+                        </label>
                     </p>
+
 
                     <p>
                         <input
@@ -260,14 +414,20 @@
                             name="alergen"
                             value="kacang"
                         >
-                        <label for="alergen-kacang">Kacang</label>
+
+                        <label for="alergen-kacang">
+                            Kacang
+                        </label>
                     </p>
+
                 </fieldset>
+
 
                 <p>
                     <label for="lokasi-pengambilan">
                         Lokasi pengambilan *
-                    </label><br>
+                    </label>
+                    <br>
 
                     <textarea
                         id="lokasi-pengambilan"
@@ -279,10 +439,14 @@
                         required
                     ></textarea>
                 </p>
+
             </fieldset>
 
-            <fieldset>
-                <legend>Konfirmasi keamanan pangan</legend>
+
+            <fieldset class="form-section">
+                <legend>
+                    Konfirmasi keamanan pangan
+                </legend>
 
                 <p>
                     <input
@@ -294,35 +458,70 @@
                     >
 
                     <label for="konfirmasi-keamanan">
-                        Saya memastikan contoh makanan ini masih layak konsumsi dan
-                        informasi kondisi serta alergennya telah ditulis dengan jujur. *
+                        Saya memastikan contoh makanan ini masih layak
+                        konsumsi dan informasi kondisi serta alergennya
+                        telah ditulis dengan jujur. *
                     </label>
                 </p>
+
             </fieldset>
 
-            <p>
-                <button type="submit">Kirim penawaran latihan</button>
-                <button type="reset">Kosongkan formulir</button>
+
+            <p class="form-actions">
+
+                <button
+                    class="button"
+                    type="submit"
+                >
+                    Kirim penawaran latihan
+                </button>
+
+                <button
+                    class="button button-secondary"
+                    type="reset"
+                >
+                    Kosongkan formulir
+                </button>
+
             </p>
+
         </form>
 
-        <section aria-labelledby="batas-validasi-html">
+
+        <section
+            class="section"
+            aria-labelledby="batas-validasi-html"
+        >
+
             <h2 id="batas-validasi-html">
                 Batas validasi pada tahap HTML
             </h2>
 
             <p>
-                Atribut HTML dapat memeriksa isian wajib, format dasar, dan rentang
-                angka. Namun, HTML belum dapat memastikan harga penawaran lebih kecil
-                daripada harga normal atau batas pengambilan berada di masa depan.
-                Aturan lintas-kolom tersebut akan ditambahkan dengan JavaScript dan
-                tetap diperiksa ulang pada server.
+                Atribut HTML dapat memeriksa isian wajib, format dasar,
+                dan rentang angka. Namun, HTML belum dapat memastikan
+                harga penawaran lebih kecil daripada harga normal atau
+                batas pengambilan berada di masa depan. Aturan lintas-kolom
+                tersebut akan ditambahkan dengan JavaScript dan tetap
+                diperiksa ulang pada server.
             </p>
+
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 SisaBaik — Proyek pembelajaran Pengembangan Web.</p>
+
+    <footer class="site-footer">
+
+        <div class="container footer-layout">
+
+            <p>
+                &copy; 2026 SisaBaik — Proyek pembelajaran Pengembangan Web.
+            </p>
+
+        </div>
+
     </footer>
+
 </body>
 </html>
