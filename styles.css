@@ -210,7 +210,6 @@ a:hover {
     color: var(--color-muted);
 }
 
-
 .button-group,
 .form-actions {
     display: flex;
@@ -218,7 +217,6 @@ a:hover {
     gap: 0.75rem;
     align-items: center;
 }
-
 .button {
     display: inline-block;
     padding: 0.75rem 1rem;
@@ -232,30 +230,24 @@ a:hover {
     text-decoration: none;
     cursor: pointer;
 }
-
 .button:hover {
     background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
 }
-
 .button-secondary {
     background: transparent;
     color: var(--color-primary-dark);
 }
-
 .section {
     padding-block: clamp(2.5rem, 7vw, 5rem);
 }
-
 .section-alt {
     background: var(--color-surface);
 }
-
 .section-intro {
     max-width: 65ch;
     color: var(--color-muted);
 }
-
 .steps-grid,
 .benefit-grid,
 .offer-grid {
@@ -263,7 +255,6 @@ a:hover {
     grid-template-columns: 1fr;
     gap: 1rem;
 }
-
 .card {
     padding: 1.25rem;
     border: 0.0625rem solid var(--color-border);
@@ -271,7 +262,6 @@ a:hover {
     background: var(--color-surface);
     box-shadow: var(--shadow-card);
 }
-
 
 /* =========================================
    TAMBAHAN ICON MANFAAT
@@ -285,8 +275,6 @@ a:hover {
     vertical-align: middle;
     border-radius: 0.35rem;
 }
-
-
 .step-number {
     display: inline-grid;
     width: 2.25rem;
@@ -298,7 +286,6 @@ a:hover {
     color: var(--color-primary-dark);
     font-weight: 700;
 }
-
 .offer-card {
     display: flex;
     flex-direction: column;
@@ -308,7 +295,6 @@ a:hover {
     background: var(--color-surface);
     box-shadow: var(--shadow-card);
 }
-
 .offer-card__visual {
     min-height: 8rem;
     background: linear-gradient(
@@ -317,23 +303,19 @@ a:hover {
         var(--color-primary-dark)
     );
 }
-
 .offer-card__content {
     display: flex;
     flex: 1;
     flex-direction: column;
     padding: 1.25rem;
 }
-
 .offer-card__meta {
     color: var(--color-muted);
 }
-
 .offer-card__price {
     margin-block-start: auto;
     font-size: 1.15rem;
 }
-
 .badge {
     display: inline-block;
     width: fit-content;
@@ -345,18 +327,15 @@ a:hover {
     font-size: 0.85rem;
     font-weight: 700;
 }
-
 .notice {
     padding: 1rem;
     border-inline-start: 0.3rem solid var(--color-primary);
     border-radius: var(--radius-small);
     background: var(--color-primary-soft);
 }
-
 .page-heading {
     padding-block: clamp(2.5rem, 7vw, 5rem) 2rem;
 }
-
 .form-card {
     max-width: 56rem;
     margin-block-end: 3rem;
@@ -366,27 +345,23 @@ a:hover {
     background: var(--color-surface);
     box-shadow: var(--shadow-card);
 }
-
 .form-section {
     margin: 0 0 1.5rem;
     padding: 1.25rem;
     border: 0.0625rem solid var(--color-border);
     border-radius: var(--radius-medium);
 }
-
 .form-section legend {
     padding-inline: 0.4rem;
     color: var(--color-primary-dark);
     font-size: 1.1rem;
     font-weight: 700;
 }
-
 label {
     display: inline-block;
     margin-block-end: 0.35rem;
     font-weight: 700;
 }
-
 input,
 select,
 textarea {
@@ -398,17 +373,14 @@ textarea {
     color: var(--color-text);
     font: inherit;
 }
-
 textarea {
     resize: vertical;
 }
-
 input:focus,
 select:focus,
 textarea:focus {
     border-color: var(--color-primary-dark);
 }
-
 input[type="checkbox"],
 input[type="radio"] {
     width: 1.1rem;
@@ -416,75 +388,93 @@ input[type="radio"] {
     margin: 0.2rem 0 0;
     accent-color: var(--color-primary);
 }
-
 .required-note {
     color: var(--color-muted);
 }
-
 .site-footer {
     padding-block: 2rem;
     background: var(--color-primary-dark);
     color: var(--color-surface);
 }
-
 .site-footer a {
     color: var(--color-surface);
 }
-
 .footer-layout {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .footer-layout p,
 .footer-layout address {
     margin: 0;
 }
 
-
 @media (min-width: 48rem) {
-
     .header-layout {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
-
     .hero-layout {
         grid-template-columns: minmax(0, 1.5fr) minmax(15rem, 0.7fr);
     }
-
     .steps-grid,
     .benefit-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
     .offer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
     .footer-layout {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 }
-
-
 @media (min-width: 68rem) {
-
     .offer-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
 }
-
-
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
+}
 
+.filter-panel {
+    display: grid;
+    gap: 1rem;
+    margin-block-end: 1.5rem;
+    padding: 1rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+}
+
+.filter-panel p {
+    margin: 0;
+}
+
+.status-message {
+    min-height: 1.6em;
+    color: var(--color-muted);
+}
+
+.cart-summary {
+    margin-block-start: 1.5rem;
+    padding: 1rem;
+    border-radius: var(--radius-medium);
+    background: var(--color-surface);
+}
+
+.error-message {
+    color: var(--color-danger);
+    font-weight: 700;
+}
+
+@media (min-width: 48rem) {
+    .filter-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }

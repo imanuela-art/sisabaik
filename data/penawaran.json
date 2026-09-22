@@ -1,0 +1,8 @@
+[
+    {"id":1, "nama":"Paket roti campur", "kategori":"roti-kue", "labelKategori":"Roti dan kue","penyedia":"Toko Roti Laurence","stok":8,"satuan":"paket","hargaNormal":25000,"hargaPenawaran":10000,"batas":"2026-09-03T18:00:00+07:00"}, 
+    {"id":2, "nama":"Nasi dan lauk harian", "kategori":"makanan-siap-saji", "labelKategori":"Makanan siap saji", "penyedia":"Dapur Laurence", "stok":6,"satuan":"porsi", "hargaNormal":30000, "hargaPenawaran":15000, "batas":"2026-09-03T19:00:00+07:00"},
+    {"id":3, "nama":"Paket buah matang", "kategori":"buah-sayur", "labelKategori":"Buah dan sayur", "penyedia":"Toko Buah Laurence", "stok":4, "satuan": "paket", "hargaNormal":18000, "hargaPenawaran":0, "batas": "2026-09-03T17:30:00+07:00"},
+    {"id":4, "nama":"Paket muffin campur", "kategori": "roti-kue", "labelKategori":"Roti dan kue", "penyedia": "Dapur Manis", "stok":7, "satuan":"paket", "hargaNormal": 22000, "hargaPenawaran":9000, "batas": "2026-09-03T20:00:00+07:00"},
+    {"id":5, "nama":"Paket capcay siap makan", "kategori":"makanan-siap-saji", "labelKategori":"Makanan siap saji", "penyedia": "Warung Sehat", "stok":5, "satuan": "porsi", "hargaNormal":28000, "hargaPenawaran":12000, "batas": "2026-09-03T19:30:00+07:00"}
+
+]

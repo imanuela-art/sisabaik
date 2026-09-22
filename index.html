@@ -17,6 +17,7 @@
     <title>Beranda | SisaBaik</title>
 
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -363,181 +364,85 @@
                 </h2>
 
                 <p class="section-intro">
-                    Seluruh data berikut bersifat fiktif untuk keperluan
-                    pembelajaran.
+                    Data fiktif dimuat dari JSON untuk latihan JavaScript. Penawaran nyata akan muncul dari penyedia yang mendaftar.
                 </p>
 
+                <form
+                    class="filter-panel"
+                    id="filter-form"
+                    role="search"
+                >
 
-                <div class="offer-grid">
+    <p>
+        <label for="kata-kunci">
+            Cari penawaran
+        </label>
+        <br>
+        <input
+            id="kata-kunci"
+            name="kata_kunci"
+            type="search"
+            placeholder="Contoh: roti"
+        >
+    </p>
 
+    <p>
+        <label for="filter-kategori">
+            Kategori
+        </label>
+        <br>
 
-                    <!-- PENAWARAN 1 -->
-                    <article class="offer-card">
+        <select
+            id="filter-kategori"
+            name="kategori"
+        >
+            <option value="semua">
+                Semua kategori
+            </option>
 
-                        <div
-                            class="offer-card__visual"
-                            aria-hidden="true"
-                        ></div>
+            <option value="makanan-siap-saji">
+                Makanan siap saji
+            </option>
 
-                        <div class="offer-card__content">
+            <option value="roti-kue">
+                Roti dan kue
+            </option>
 
-                            <span class="badge">
-                                Roti dan kue
-                            </span>
+            <option value="buah-sayur">
+                Buah dan sayur
+            </option>
+        </select>
+    </p>
+    </form>
 
-                            <h3>
-                                Paket roti campur
-                            </h3>
+    <p
+        id="status-katalog"
+        class="status-message"
+        role="status"
+        aria-live="polite"
+    >
+        Memuat penawaran...
+    </p>
 
-                            <p class="offer-card__meta">
+    <div
+        class="offer-grid"
+        id="daftar-penawaran"
+        ></div>
 
-                                Toko Roti DRaja ·
+    <aside
+        class="cart-summary"
+        aria-labelledby="judul-ringkasan"
+    >
+    <h3 id="judul-ringkasan">Ringkasan pesanan</h3>
 
-                                <data value="8">
-                                    8 paket
-                                </data>
-
-                            </p>
-
-                            <p class="offer-card__price">
-
-                                <del>
-                                    Rp25.000
-                                </del>
-
-                                <strong>
-                                    Rp10.000
-                                </strong>
-
-                            </p>
-
-                            <p>
-
-                                Batas pengambilan:
-
-                                <time datetime="2026-09-03T18:00:00+07:00">
-                                    3 September 2026, 18.00 WIB
-                                </time>
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PENAWARAN 2 -->
-                    <article class="offer-card">
-
-                        <div
-                            class="offer-card__visual"
-                            aria-hidden="true"
-                        ></div>
-
-                        <div class="offer-card__content">
-
-                            <span class="badge">
-                                Makanan siap saji
-                            </span>
-
-                            <h3>
-                                Nasi dan lauk harian
-                            </h3>
-
-                            <p class="offer-card__meta">
-
-                                Dapur Contoh ·
-
-                                <data value="6">
-                                    6 porsi
-                                </data>
-
-                            </p>
-
-                            <p class="offer-card__price">
-
-                                <del>
-                                    Rp30.000
-                                </del>
-
-                                <strong>
-                                    Rp15.000
-                                </strong>
-
-                            </p>
-
-                            <p>
-
-                                Batas pengambilan:
-
-                                <time datetime="2026-09-03T19:00:00+07:00">
-                                    3 September 2026, 19.00 WIB
-                                </time>
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PENAWARAN 3 -->
-                    <article class="offer-card">
-
-                        <div
-                            class="offer-card__visual"
-                            aria-hidden="true"
-                        ></div>
-
-                        <div class="offer-card__content">
-
-                            <span class="badge">
-                                Buah dan sayur
-                            </span>
-
-                            <h3>
-                                Paket buah matang
-                            </h3>
-
-                            <p class="offer-card__meta">
-
-                                Toko Buah Contoh ·
-
-                                <data value="4">
-                                    4 paket
-                                </data>
-
-                            </p>
-
-                            <p class="offer-card__price">
-
-                                <strong>
-                                    Disalurkan tanpa biaya
-                                </strong>
-
-                            </p>
-
-                            <p>
-
-                                Batas pengambilan:
-
-                                <time datetime="2026-09-03T17:30:00+07:00">
-                                    3 September 2026, 17.30 WIB
-                                </time>
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
+    <p>
+        <span id="jumlah-item">0</span>
+        item . total
+        <strong id="total-pesanan">Rp0</strong>
+    </p>
+    </aside>
             </div>
-
         </section>
-
 
         <!-- KEAMANAN -->
         <section
